@@ -1,2 +1,478 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>BLACK NOVA — Web3 Marketing Agency</title> <meta name="description" content="Black Nova — Premium Web3 Marketing, Community Growth, KOL Marketing and Strategic Partnerships."> <style> /* ================================ RESET ================================ / *{ margin:0; padding:0; box-sizing:border-box; } html{ scroll-behavior:smooth; } body{ background:#030303; color:#fff; font-family:Arial,Helvetica,sans-serif; overflow-x:hidden; } a{ color:inherit; text-decoration:none; } / ================================ GLOBAL BACKGROUND ================================ / body{ background: radial-gradient(circle at 50% -10%,rgba(124,58,237,.16),transparent 32%), #030303; } body:before{ content:""; position:fixed; inset:0; pointer-events:none; z-index:-5; background-image: linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px); background-size:60px 60px; mask-image:linear-gradient(to bottom,black,transparent 90%); } / ================================ FLOATING GLOW ================================ / .glow{ position:fixed; width:500px; height:500px; border-radius:50%; background:rgba(124,58,237,.12); filter:blur(100px); pointer-events:none; z-index:-4; top:-180px; left:50%; transform:translateX(-50%); } / ================================ NAVBAR ================================ / .navbar{ position:fixed; top:0; left:0; width:100%; z-index:1000; padding:20px 7%; display:flex; justify-content:space-between; align-items:center; background:rgba(3,3,3,.75); backdrop-filter:blur(20px); border-bottom:1px solid rgba(255,255,255,.06); } .logo{ font-size:23px; font-weight:900; letter-spacing:4px; } .logo span{ color:#9b6cff; text-shadow: 0 0 20px rgba(139,92,246,.7); } .nav{ display:flex; gap:28px; list-style:none; } .nav a{ color:#888; font-size:13px; transition:.3s; } .nav a:hover{ color:#fff; } .menu{ display:none; border:0; background:none; color:white; font-size:25px; cursor:pointer; } / ================================ HERO ================================ / .hero{ min-height:100vh; display:flex; justify-content:center; align-items:center; text-align:center; padding:150px 7% 100px; position:relative; } .hero-circle{ position:absolute; width:650px; height:650px; border-radius:50%; border:1px solid rgba(139,92,246,.08); box-shadow: 0 0 100px rgba(124,58,237,.08), inset 0 0 100px rgba(124,58,237,.05); animation:heroPulse 5s infinite ease-in-out; } .hero-circle:before{ content:""; position:absolute; inset:70px; border-radius:50%; border:1px solid rgba(139,92,246,.07); } @keyframes heroPulse{ 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.06); } } .hero-content{ position:relative; z-index:2; max-width:1000px; } .badge{ display:inline-block; padding:9px 18px; border-radius:50px; border:1px solid rgba(139,92,246,.35); background:rgba(139,92,246,.06); color:#bca9ff; font-size:11px; letter-spacing:3px; margin-bottom:30px; } .hero h1{ font-size:clamp(60px,11vw,140px); line-height:.82; letter-spacing:-8px; font-weight:950; } .hero h1 span{ color:#8b5cf6; text-shadow: 0 0 25px rgba(139,92,246,.5), 0 0 80px rgba(139,92,246,.2); } .hero h2{ margin-top:30px; font-size:clamp(20px,3vw,30px); color:#ddd; font-weight:600; } .hero p{ max-width:650px; margin:22px auto 35px; color:#777; font-size:16px; line-height:1.8; } .buttons{ display:flex; justify-content:center; gap:14px; flex-wrap:wrap; } .btn{ display:inline-flex; align-items:center; justify-content:center; padding:15px 27px; border-radius:9px; font-size:13px; font-weight:700; transition:.35s; } .btn-primary{ background:#8b5cf6; box-shadow: 0 0 25px rgba(139,92,246,.25); } .btn-primary:hover{ transform:translateY(-4px); box-shadow: 0 0 45px rgba(139,92,246,.5); } .btn-outline{ border:1px solid #292929; background:rgba(255,255,255,.02); } .btn-outline:hover{ border-color:#8b5cf6; transform:translateY(-4px); } / ================================ TRUST ================================ / .trust{ padding:35px 7%; border-top:1px solid #121212; border-bottom:1px solid #121212; text-align:center; } .trust-title{ color:#444; font-size:10px; letter-spacing:4px; margin-bottom:22px; } .trust-row{ display:flex; justify-content:center; flex-wrap:wrap; gap:45px; color:#666; font-size:12px; font-weight:bold; letter-spacing:2px; } / ================================ SECTIONS ================================ / section{ padding:110px 7%; } .container{ max-width:1150px; margin:auto; } .section-head{ text-align:center; max-width:700px; margin:auto; } .eyebrow{ color:#9b7cff; font-size:11px; font-weight:bold; letter-spacing:4px; margin-bottom:14px; } .section-head h2{ font-size:clamp(35px,5vw,58px); letter-spacing:-2px; line-height:1; } .section-head p{ margin-top:18px; color:#707070; font-size:14px; line-height:1.7; } / ================================ SERVICES ================================ / .services-grid{ margin-top:60px; display:grid; grid-template-columns:repeat(4,1fr); gap:16px; } .service{ position:relative; min-height:235px; padding:30px 25px; border:1px solid #181818; border-radius:17px; background: linear-gradient( 145deg, rgba(255,255,255,.045), rgba(255,255,255,.008) ); overflow:hidden; transition:.4s; } .service:after{ content:""; position:absolute; width:130px; height:130px; right:-70px; bottom:-70px; border-radius:50%; background:#8b5cf6; filter:blur(70px); opacity:0; transition:.4s; } .service:hover{ transform:translateY(-9px); border-color:#4c1d95; } .service:hover:after{ opacity:.2; } .service-icon{ font-size:28px; margin-bottom:28px; } .service h3{ font-size:17px; margin-bottom:10px; } .service p{ color:#707070; font-size:13px; line-height:1.7; } / ================================ WHY US ================================ / .dark-section{ background:#060606; border-top:1px solid #101010; border-bottom:1px solid #101010; } .why-grid{ margin-top:55px; display:grid; grid-template-columns:repeat(2,1fr); gap:17px; } .why-card{ padding:32px; border:1px solid #181818; border-radius:15px; background:#090909; transition:.3s; } .why-card:hover{ border-color:#5b21b6; } .number{ color:#8b5cf6; font-size:11px; letter-spacing:3px; font-weight:bold; } .why-card h3{ margin:12px 0 9px; font-size:20px; } .why-card p{ color:#707070; font-size:13px; line-height:1.7; } / ================================ STATS ================================ / .stats{ margin-top:60px; display:grid; grid-template-columns:repeat(4,1fr); border:1px solid #181818; border-radius:18px; overflow:hidden; } .stat{ padding:38px 15px; text-align:center; border-right:1px solid #181818; } .stat:last-child{ border-right:0; } .stat h3{ color:#a78bfa; font-size:44px; text-shadow: 0 0 25px rgba(139,92,246,.2); } .stat p{ margin-top:5px; color:#606060; font-size:11px; letter-spacing:1px; } / ================================ PORTFOLIO ================================ / .portfolio{ margin-top:60px; display:grid; grid-template-columns:repeat(3,1fr); gap:18px; } .project{ min-height:320px; padding:28px; border:1px solid #1b1b1b; border-radius:18px; background: linear-gradient( 150deg, #0e0e0e, #060606 ); position:relative; overflow:hidden; transition:.4s; } .project:hover{ transform:translateY(-8px); border-color:#5b21b6; } .project-top{ display:flex; justify-content:space-between; align-items:center; } .project-tag{ color:#9b7cff; font-size:9px; letter-spacing:2px; } .project-icon{ width:45px; height:45px; border-radius:12px; display:flex; align-items:center; justify-content:center; background:rgba(139,92,246,.1); border:1px solid rgba(139,92,246,.2); } .project h3{ margin-top:55px; font-size:24px; } .project p{ margin-top:10px; color:#707070; font-size:13px; line-height:1.7; } .project-bottom{ position:absolute; bottom:25px; left:28px; right:28px; padding-top:15px; border-top:1px solid #181818; display:flex; justify-content:space-between; } .project-bottom span{ color:#555; font-size:10px; } .project-bottom strong{ display:block; color:#ddd; margin-top:3px; } / ================================ PRICING ================================ / .pricing{ margin-top:60px; display:grid; grid-template-columns:repeat(3,1fr); gap:18px; } .price-card{ position:relative; padding:35px; border:1px solid #1b1b1b; border-radius:18px; background:#090909; } .price-card.featured{ border-color:#8b5cf6; box-shadow: 0 0 60px rgba(124,58,237,.07); } .popular{ position:absolute; top:16px; right:16px; padding:6px 10px; border-radius:20px; background:#8b5cf6; color:white; font-size:8px; font-weight:bold; letter-spacing:1px; } .price-card h3{ font-size:20px; } .price{ margin:20px 0; font-size:35px; font-weight:900; } .price-card ul{ list-style:none; margin-bottom:28px; } .price-card li{ color:#707070; font-size:13px; margin:11px 0; } .price-card li:before{ content:"✓"; color:#9b7cff; margin-right:10px; } / ================================ GLOBAL NETWORK ================================ / .network{ text-align:center; background: radial-gradient( circle at center, rgba(124,58,237,.09), transparent 40% ); } .orbit{ width:290px; height:290px; margin:60px auto 30px; border-radius:50%; border:1px solid rgba(139,92,246,.25); position:relative; box-shadow: 0 0 80px rgba(124,58,237,.1); animation:spin 15s linear infinite; } .orbit:before, .orbit:after{ content:""; position:absolute; inset:35px; border-radius:50%; border:1px solid rgba(139,92,246,.15); } .orbit:after{ inset:75px; } .orbit-dot{ position:absolute; width:10px; height:10px; border-radius:50%; background:#9b7cff; box-shadow: 0 0 20px #8b5cf6; top:0; left:50%; transform:translate(-50%,-50%); } @keyframes spin{ from{ transform:rotate(0deg); } to{ transform:rotate(360deg); } } .network-text{ color:#666; font-size:11px; letter-spacing:3px; } / ================================ ABOUT ================================ / .about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center; } .about-text h2{ font-size:clamp(38px,5vw,58px); line-height:1; letter-spacing:-2px; } .about-text p{ margin-top:20px; color:#707070; font-size:14px; line-height:1.8; } .about-card{ padding:45px; border:1px solid #202020; border-radius:20px; text-align:center; background: radial-gradient( circle at top, rgba(124,58,237,.12), transparent 50% ), #090909; } .avatar{ width:115px; height:115px; margin:auto auto 22px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:35px; font-weight:900; background: radial-gradient(circle,#8b5cf6,#21133d); border:1px solid rgba(139,92,246,.5); box-shadow: 0 0 50px rgba(139,92,246,.2); } .about-card h3{ font-size:22px; } .about-card p{ margin:7px 0 22px; color:#666; font-size:12px; } / ================================ FAQ ================================ / .faq{ max-width:850px; margin:55px auto 0; } details{ padding:21px; margin-bottom:12px; border:1px solid #191919; border-radius:12px; background:#080808; } summary{ cursor:pointer; font-size:14px; font-weight:bold; } details p{ color:#707070; margin-top:14px; font-size:13px; line-height:1.7; } / ================================ FINAL CTA ================================ / .cta{ text-align:center; padding:140px 7%; background: radial-gradient( circle at center, rgba(124,58,237,.18), transparent 45% ); } .cta h2{ font-size:clamp(45px,7vw,80px); line-height:.95; letter-spacing:-4px; } .cta p{ max-width:600px; margin:20px auto 30px; color:#707070; } .socials{ display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:28px; } .social{ padding:12px 21px; border:1px solid #292929; border-radius:9px; color:#999; font-size:12px; transition:.3s; } .social:hover{ color:white; border-color:#8b5cf6; transform:translateY(-3px); } / ================================ FOOTER ================================ / footer{ padding:35px 7%; text-align:center; border-top:1px solid #151515; color:#555; font-size:11px; } footer strong{ color:#888; letter-spacing:3px; } footer a:hover{ color:#a78bfa; } / ================================ REVEAL ================================ / .reveal{ opacity:0; transform:translateY(30px); transition: opacity .8s ease, transform .8s ease; } .reveal.show{ opacity:1; transform:translateY(0); } / ================================ MOBILE ================================ / @media(max-width:950px){ .services-grid{ grid-template-columns:repeat(2,1fr); } .portfolio{ grid-template-columns:1fr; } .pricing{ grid-template-columns:1fr; } .about-grid{ grid-template-columns:1fr; } } @media(max-width:700px){ .navbar{ padding:18px 5%; } .menu{ display:block; } .nav{ display:none; position:absolute; top:70px; left:5%; right:5%; flex-direction:column; gap:0; padding:10px; background:#080808; border:1px solid #222; border-radius:13px; } .nav.show{ display:flex; } .nav li a{ display:block; padding:13px; } section{ padding:80px 5%; } .hero{ padding:130px 5% 80px; } .hero h1{ font-size:65px; letter-spacing:-5px; } .hero-circle{ width:400px; height:400px; } .services-grid{ grid-template-columns:1fr; } .why-grid{ grid-template-columns:1fr; } .stats{ grid-template-columns:1fr 1fr; } .stat{ border-bottom:1px solid #181818; } .stat:nth-child(2){ border-right:0; } .about-grid{ gap:35px; } .cta{ padding:100px 5%; } .cta h2{ letter-spacing:-2px; } } </style> </head> <body> <div class="glow"></div> <!-- ================================ NAVBAR ================================ --> <header class="navbar"> <a href="#home" class="logo"> BLACK <span>NOVA</span> </a> <button class="menu" onclick="toggleMenu()"> ☰ </button> <ul class="nav" id="nav"> <li><a href="#home">Home</a></li> <li><a href="#services">Services</a></li> <li><a href="#work">Work</a></li> <li><a href="#results">Results</a></li> <li><a href="#packages">Packages</a></li> <li><a href="#about">About</a></li> <li><a href="#contact">Contact</a></li> </ul> </header> <!-- ================================ HERO ================================ --> <section class="hero" id="home"> <div class="hero-circle"></div> <div class="hero-content reveal"> <div class="badge"> WEB3 • CRYPTO • GROWTH </div> <h1> BLACK <span>NOVA</span> </h1> <h2> Marketing Beyond the Ordinary. </h2> <p> We build visibility, create communities and turn ambitious Web3 projects into powerful digital brands. </p> <div class="buttons"> <a href="https://t.me/Cryptopirate12" target="_blank" class="btn btn-primary"> Start a Partnership → </a> <a href="#services" class="btn btn-outline"> Explore Services </a> </div> </div> </section> <!-- ================================ TRUST ================================ --> <div class="trust"> <div class="trust-title"> BUILT FOR THE NEXT GENERATION OF WEB3 </div> <div class="trust-row"> <span>WEB3</span> <span>CRYPTO</span> <span>DEFI</span> <span>MEMECOINS</span> <span>COMMUNITIES</span> </div> </div> <!-- ================================ SERVICES ================================ --> <section id="services"> <div class="container"> <div class="section-head reveal"> <div class="eyebrow"> OUR EXPERTISE </div> <h2> Everything Your Project Needs. </h2> <p> From awareness to community growth, we create marketing systems designed for Web3. </p> </div> <div class="services-grid"> <div class="service reveal"> <div class="service-icon">🚀</div> <h3> Web3 Marketing </h3> <p> Strategic campaigns designed to increase visibility and brand awareness. </p> </div> <div class="service reveal"> <div class="service-icon">𝕏</div> <h3> X / Twitter Growth </h3> <p> Build a stronger social presence and meaningful engagement. </p> </div> <div class="service reveal"> <div class="service-icon">👥</div> <h3> Community Growth </h3> <p> Grow active Telegram and Discord communities through targeted campaigns. </p> </div> <div class="service reveal"> <div class="service-icon">🤝</div> <h3> KOL Marketing </h3> <p> Connect projects with relevant creators and Web3 influencers. </p> </div> <div class="service reveal"> <div class="service-icon">🎙️</div> <h3> AMA & Spaces </h3> <p> Create direct conversations between projects and their communities. </p> </div> <div class="service reveal"> <div class="service-icon">🎁</div> <h3> Giveaway Campaigns </h3> <p> High-impact campaigns designed to increase reach and participation. </p> </div> <div class="service reveal"> <div class="service-icon">📈</div> <h3> Project Promotion </h3> <p> Put your project in front of targeted crypto audiences. </p> </div> <div class="service reveal"> <div class="service-icon">🎨</div> <h3> Creative & Content </h3> <p> Premium visuals and content that make your project stand out. </p> </div> </div> </div> </section> <!-- ================================ WHY BLACK NOVA ================================ --> <section class="dark-section"> <div class="container"> <div class="section-head reveal"> <div class="eyebrow"> THE BLACK NOVA EDGE </div> <h2> Why Black Nova? </h2> <p> Strategy first. Execution second. Growth always. </p> </div> <div class="why-grid"> <div class="why-card reveal"> <div class="number"> 01 — STRATEGY </div> <h3> Built With Purpose </h3> <p> Every campaign begins with a clear objective, audience and growth strategy. </p> </div> <div class="why-card reveal"> <div class="number"> 02 — COMMUNITY </div> <h3> Community Driven </h3> <p> We focus on meaningful engagement instead of empty numbers. </p> </div> <div class="why-card reveal"> <div class="number"> 03 — GLOBAL </div> <h3> Global Reach </h3> <p> Connect your project with communities across the global Web3 ecosystem. </p> </div> <div class="why-card reveal"> <div class="number"> 04 — RESULTS </div> <h3> Results Focused </h3> <p> Campaigns are designed around measurable objectives and meaningful outcomes. </p> </div> </div> </div> </section> <!-- ================================ RESULTS ================================ --> <section id="results"> <div class="container"> <div class="section-head reveal"> <div class="eyebrow"> PERFORMANCE </div> <h2> Numbers That Matter. </h2> <p> Replace these placeholders with your verified campaign statistics. </p> </div> <div class="stats"> <div class="stat reveal"> <h3>XXK+</h3> <p> COMMUNITY REACH </p> </div> <div class="stat reveal"> <h3>XXM+</h3> <p> SOCIAL IMPRESSIONS </p> </div> <div class="stat reveal"> <h3>XX+</h3> <p> CAMPAIGNS </p> </div> <div class="stat reveal"> <h3>XX+</h3> <p> PARTNERSHIPS </p> </div> </div> </div> </section> <!-- ================================ PORTFOLIO ================================ --> <section id="work" class="dark-section"> <div class="container"> <div class="section-head reveal"> <div class="eyebrow"> SELECTED WORK </div> <h2> Campaigns That Create Attention. </h2> <p> Replace these sample projects with your real campaigns and verified results. </p> </div> <div class="portfolio"> <div class="project reveal"> <div class="project-top"> <div class="project-tag"> WEB3 MARKETING </div> <div class="project-icon"> 🚀 </div> </div> <h3> Project Campaign </h3> <p> Strategic promotion and community activation designed to increase project awareness. </p> <div class="project-bottom"> <span> REACH <strong>XXK+</strong> </span> <span> GROWTH <strong>XX%</strong> </span> </div> </div> <div class="project reveal"> <div class="project-top"> <div class="project-tag"> KOL CAMPAIGN </div> <div class="project-icon"> ⭐ </div> </div> <h3> Influencer Campaign </h3> <p> Targeted creator campaign focused on awareness, engagement and community expansion. </p> <div class="project-bottom"> <span> IMPRESSIONS <strong>XXM+</strong> </span> <span> ENGAGEMENT <strong>XX%</strong> </span> </div> </div> <div class="project reveal"> <div class="project-top"> <div class="project-tag"> COMMUNITY </div> <div class="project-icon"> 👥 </div> </div> <h3> Community Growth </h3> <p> Community-focused marketing designed to attract targeted Web3 users. </p> <div class="project-bottom"> <span> MEMBERS <strong>XXK+</strong> </span> <span> STATUS <strong>LIVE</strong> </span> </div> </div> </div> </div> </section> <!-- ================================ PRICING ================================ --> <section id="packages"> <div class="container"> <div class="section-head reveal"> <div class="eyebrow"> PARTNERSHIP PLANS </div> <h2> Choose Your Growth. </h2> <p> Flexible solutions for projects at every stage. </p> </div> <div class="pricing"> <div class="price-card reveal"> <h3> NOVA START </h3> <div class="price"> CUSTOM </div> <ul> <li>Social Media Promotion</li> <li>Community Promotion</li> <li>Campaign Support</li> <li>Basic Partnership Support</li> </ul> <a href="https://t.me/Cryptopirate12" target="_blank" class="btn btn-outline"> Get Started </a> </div> <div class="price-card featured reveal"> <div class="popular"> MOST POPULAR </div> <h3> NOVA GROWTH </h3> <div class="price"> CUSTOM </div> <ul> <li>X / Twitter Campaigns</li> <li>Telegram Promotion</li> <li>KOL Campaigns</li> <li>AMA / Spaces</li> <li>Giveaway Campaign</li> <li>Partnership Support</li> </ul> <a href="https://t.me/Cryptopirate12" target="_blank" class="btn btn-primary"> Choose Growth </a> </div> <div class="price-card reveal"> <h3> NOVA ELITE </h3> <div class="price"> CUSTOM </div> <ul> <li>Full Marketing Strategy</li> <li>KOL & Influencer Campaigns</li> <li>Community Growth</li> <li>AMA & Spaces</li> <li>Creative Content</li> <li>Strategic Partnerships</li> </ul> <a href="https://t.me/Cryptopirate12" target="_blank" class="btn btn-outline"> Contact Us </a> </div> </div> </div> </section> <!-- ================================ GLOBAL NETWORK ================================ --> <section class="network"> <div class="container"> <div class="section-head reveal"> <div class="eyebrow"> GLOBAL NETWORK </div> <h2> One Network. Global Reach. </h2> <p> Connecting projects, creators and communities across the Web3 ecosystem. </p> </div> <div class="orbit"> <div class="orbit-dot"></div> </div> <div class="network-text"> WEB3 • CREATORS • COMMUNITIES • PARTNERS </div> </div> </section> <!-- ================================ ABOUT ================================ --> <section id="about"> <div class="container"> <div class="about-grid"> <div class="about-text reveal"> <div class="eyebrow"> ABOUT BLACK NOVA </div> <h2> We Don't Just Promote. We Build. </h2> <p> Black Nova is a Web3-focused digital marketing agency built around growth, community and strategic partnerships. </p> <p> Our mission is simple — help ambitious projects get noticed, build strong communities and create brands people remember. </p> </div> <div class="about-card reveal"> <div class="avatar"> BN </div> <h3> BLACK NOVA </h3> <p> WEB3 MARKETING & GROWTH </p> <a href="https://x.com/romelamato" target="_blank" class="btn btn-outline"> Follow on X → </a> </div> </div> </div> </section> <!-- ================================ FAQ ================================ --> <section class="dark-section"> <div class="container"> <div class="section-head reveal"> <div class="eyebrow"> FAQ </div> <h2> Questions, Answered. </h2> </div> <div class="faq"> <details class="reveal"> <summary> What type of projects does Black Nova work with? </summary> <p> We work with Web3 projects, crypto communities, startups, brands and digital projects. </p> </details> <details class="reveal"> <summary> Can you create a custom marketing campaign? </summary> <p> Yes. Campaigns can be customized according to your project's goals, audience and budget. </p> </details> <details class="reveal"> <summary> Do you provide KOL marketing? </summary> <p> Yes. KOL and influencer campaigns can be included depending on the selected partnership plan. </p> </details> <details class="reveal"> <summary> How can I start a partnership? </summary> <p> Contact Black Nova through Telegram and share your project, goals and campaign requirements. </p> </details> </div> </div> </section> <!-- ================================ FINAL CTA ================================ --> <section class="cta" id="contact"> <div class="reveal"> <div class="eyebrow"> LET'S BUILD TOGETHER </div> <h2> Ready to Make <br> an Impact? </h2> <p> Your project deserves more than noise. Let's build something people remember. </p> <div class="buttons"> <a href="https://t.me/Cryptopirate12" target="_blank" class="btn btn-primary"> Chat on Telegram → </a> </div> <div class="socials"> <a href="https://t.me/Cryptopirate12" target="_blank" class="social"> ✈ Telegram </a> <a href="https://x.com/romelamato" target="_blank" class="social"> 𝕏 X / Twitter </a> </div> </div> </section> <!-- ================================ FOOTER ================================ --> <footer> <strong> BLACK NOVA </strong> <br><br> Marketing Beyond the Ordinary. <br><br> <a href="https://x.com/romelamato" target="_blank"> X / Twitter </a> &nbsp; • &nbsp; <a href="https://t.me/Cryptopirate12" target="_blank"> Telegram </a> <br><br> © 2026 Black Nova. All Rights Reserved. </footer> <script> / ================================ MOBILE MENU ================================ / function toggleMenu(){ document .getElementById("nav") .classList.toggle("show"); } / Close menu after clicking / document .querySelectorAll(".nav a") .forEach(function(link){ link.addEventListener("click",function(){ document .getElementById("nav") .classList.remove("show"); }); }); / ================================ SCROLL REVEAL ================================ / const observer = new IntersectionObserver( function(entries){ entries.forEach(function(entry){ if(entry.isIntersecting){ entry.target.classList.add("show"); } }); }, { threshold:0.12 } ); document .querySelectorAll(".reveal") .forEach(function(element){ observer.observe(element); }); / ================================ MOUSE GLOW ================================ */ document.addEventListener( "mousemove", function(event){ const glow = document.querySelector(".glow"); const x = event.clientX; const y = event.clientY; glow.style.left = x + "px"; glow.style.top = y - 250 + "px"; } ); </script> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Nova — Web3 Marketing Agency</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,Helvetica,sans-serif;
+            scroll-behavior:smooth;
+        }
+        body{
+            background:#050505;
+            color:#fff;
+            line-height:1.6;
+        }
+        a{
+            color:inherit;
+            text-decoration:none;
+        }
+        nav{
+            position:fixed;
+            top:0;
+            width:100%;
+            z-index:1000;
+            padding:15px 7%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            background:rgba(5,5,5,.88);
+            backdrop-filter:blur(15px);
+            border-bottom:1px solid #181818;
+        }
+        /* LOGO & PROFILE PICTURE WRAPPER */
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .profile-pic {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #8b5cf6;
+        }
+        .logo{
+            font-size:24px;
+            font-weight:900;
+            letter-spacing:3px;
+        }
+        .logo span{
+            color:#8b5cf6;
+        }
+        .nav-links{
+            display:flex;
+            gap:28px;
+            list-style:none;
+        }
+        .nav-links a{
+            color:#aaa;
+            font-size:14px;
+            transition:.3s;
+        }
+        .nav-links a:hover{
+            color:#fff;
+        }
+        .hero{
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            padding:130px 7% 80px;
+            background: radial-gradient(circle at 50% 30%,rgba(124,58,237,.25),transparent 35%), #050505;
+        }
+        .hero-content{
+            max-width:900px;
+        }
+        .badge{
+            display:inline-block;
+            padding:8px 18px;
+            border:1px solid #292929;
+            border-radius:30px;
+            color:#aaa;
+            font-size:13px;
+            margin-bottom:25px;
+        }
+        .hero h1{
+            font-size:clamp(50px,9vw,105px);
+            line-height:.95;
+            letter-spacing:-5px;
+        }
+        .hero h1 span{
+            color:#8b5cf6;
+        }
+        .hero p{
+            max-width:650px;
+            margin:28px auto;
+            color:#999;
+            font-size:18px;
+        }
+        .buttons{
+            display:flex;
+            justify-content:center;
+            gap:15px;
+            flex-wrap:wrap;
+        }
+        .btn{
+            padding:14px 25px;
+            border-radius:8px;
+            font-weight:bold;
+            transition:.3s;
+            display:inline-block;
+        }
+        .primary{
+            background:#8b5cf6;
+            color:#fff;
+        }
+        .primary:hover{
+            background:#6d28d9;
+            transform:translateY(-3px);
+        }
+        .secondary{
+            border:1px solid #333;
+            color:#ddd;
+        }
+        .secondary:hover{
+            border-color:#8b5cf6;
+            transform:translateY(-3px);
+        }
+        section{
+            padding:100px 7%;
+        }
+        .section-title{
+            text-align:center;
+            max-width:700px;
+            margin:auto;
+        }
+        .section-title h2{
+            font-size:45px;
+            margin-bottom:15px;
+        }
+        .section-title p{
+            color:#888;
+        }
+        .grid{
+            max-width:1150px;
+            margin:55px auto 0;
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:18px;
+        }
+        .card{
+            background:#0b0b0b;
+            border:1px solid #1d1d1d;
+            border-radius:15px;
+            padding:30px 24px;
+            transition:.3s;
+        }
+        .card:hover{
+            transform:translateY(-7px);
+            border-color:#6d28d9;
+        }
+        .icon{
+            font-size:30px;
+            margin-bottom:20px;
+        }
+        .card h3{
+            margin-bottom:10px;
+        }
+        .card p{
+            color:#888;
+            font-size:14px;
+        }
+        .why{
+            background:#080808;
+        }
+        .features{
+            max-width:1000px;
+            margin:50px auto 0;
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:20px;
+        }
+        .feature{
+            padding:30px;
+            border-left:2px solid #8b5cf6;
+            background:#0c0c0c;
+        }
+        .feature h3{
+            margin-bottom:8px;
+        }
+        .feature p{
+            color:#888;
+        }
+        .stats{
+            max-width:1000px;
+            margin:50px auto 0;
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            text-align:center;
+            gap:20px;
+        }
+        .stat{
+            padding:30px;
+        }
+        .stat h3{
+            font-size:42px;
+            color:#8b5cf6;
+        }
+        .stat p{
+            color:#777;
+        }
+        .pricing{
+            max-width:1100px;
+            margin:55px auto 0;
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:20px;
+        }
+        .price-card{
+            background:#0b0b0b;
+            border:1px solid #222;
+            border-radius:16px;
+            padding:35px;
+        }
+        .price-card.featured{
+            border-color:#8b5cf6;
+            transform:scale(1.03);
+        }
+        .price-card h3{
+            font-size:22px;
+        }
+        .price-card .price{
+            font-size:35px;
+            font-weight:bold;
+            margin:20px 0;
+        }
+        .price-card ul{
+            list-style:none;
+            color:#999;
+            margin-bottom:25px;
+        }
+        .price-card li{
+            margin:10px 0;
+        }
+        .price-card li::before{
+            content:"✓ ";
+            color:#8b5cf6;
+        }
+        .about{
+            max-width:900px;
+            margin:auto;
+            text-align:center;
+        }
+        .about h2{
+            font-size:45px;
+            margin-bottom:20px;
+        }
+        .about p{
+            color:#999;
+            font-size:17px;
+        }
+        .contact{
+            text-align:center;
+            background: radial-gradient(circle at center,rgba(124,58,237,.18),transparent 45%), #070707;
+        }
+        .contact h2{
+            font-size:50px;
+            margin-bottom:15px;
+        }
+        .contact p{
+            color:#888;
+            margin-bottom:30px;
+        }
+        .socials{
+            display:flex;
+            justify-content:center;
+            gap:15px;
+            margin-top:30px;
+            flex-wrap:wrap;
+        }
+        .social{
+            padding:12px 22px;
+            border:1px solid #292929;
+            border-radius:8px;
+            color:#aaa;
+            transition:.3s;
+        }
+        .social:hover{
+            border-color:#8b5cf6;
+            color:#fff;
+            transform:translateY(-3px);
+        }
+        footer{
+            padding:35px 7%;
+            text-align:center;
+            border-top:1px solid #171717;
+            color:#666;
+            font-size:13px;
+        }
+        @media(max-width:900px){
+            .grid{ grid-template-columns:repeat(2,1fr); }
+            .stats{ grid-template-columns:repeat(2,1fr); }
+            .pricing{ grid-template-columns:1fr; }
+            .price-card.featured{ transform:none; }
+        }
+        @media(max-width:650px){
+            nav{ padding:15px 5%; }
+            .nav-links{ display:none; }
+            section{ padding:75px 5%; }
+            .hero{ padding-left:5%; padding-right:5%; }
+            .hero h1{ letter-spacing:-3px; }
+            .grid, .features{ grid-template-columns:1fr; }
+            .stats{ grid-template-columns:1fr 1fr; }
+            .section-title h2, .about h2{ font-size:35px; }
+            .contact h2{ font-size:38px; }
+            .profile-pic { width: 36px; height: 36px; }
+            .logo { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
 
+    <nav>
+        <div class="brand-container">
+            <img src="logo.png" alt="Black Nova Profile Pic" class="profile-pic">
+            <div class="logo">BLACK <span>NOVA</span></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="badge">Web3 Growth Engine</span>
+            <h1>SCALING <span>WEB3</span> BRANDS</h1>
+            <p>We help crypto, NFT, and DeFi projects build active communities, maximize organic reach, and launch with maximum impact.</p>
+            <div class="buttons">
+                <a href="#contact" class="btn primary">Start Campaign</a>
+                <a href="#services" class="btn secondary">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Tailored Web3 marketing strategies designed for long-term retention and organic scaling.</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <div class="icon">🚀</div>
+                <h3>KOL & Influencer</h3>
+                <p>Access to top-tier crypto influencers on Twitter, YouTube, and Telegram for maximum reach.</p>
+            </div>
+            <div class="card">
+                <div class="icon">💬</div>
+                <h3>Community Growth</h3>
+                <p>24/7 Discord and Telegram moderation, engagement events, and community building.</p>
+            </div>
+            <div class="card">
+                <div class="icon">📈</div>
+                <h3>PR & Media Coverage</h3>
+                <p>Get featured on CoinTelegraph, CoinDesk, BeInCrypto, and other premium crypto outlets.</p>
+            </div>
+            <div class="card">
+                <div class="icon">🎯</div>
+                <h3>Guerilla Marketing</h3>
+                <p>High-converting social campaigns, viral raids, and memetic strategies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why" id="why">
+        <div class="section-title">
+            <h2>Why Black Nova?</h2>
+            <p>Data-driven methodologies paired with deep Web3 cultural understanding.</p>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <h3>Native Crypto Expertise</h3>
+                <p>We speak the language of Web3 and know exactly what turns audience interest into conversion.</p>
+            </div>
+            <div class="feature">
+                <h3>Guaranteed Engagement</h3>
+                <p>Our focus is strictly on real users, real conversations, and high-quality community members.</p>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="stat">
+                <h3>100+</h3>
+                <p>Projects Scaled</p>
+            </div>
+            <div class="stat">
+                <h3>$50M+</h3>
+                <p>Raised for Clients</p>
+            </div>
+            <div class="stat">
+                <h3>2M+</h3>
+                <p>Community Reached</p>
+            </div>
+            <div class="stat">
+                <h3>500+</h3>
+                <p>KOL Network</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="section-title">
+            <h2>Growth Plans</h2>
+            <p>Flexible packages built to support projects at every stage of development.</p>
+        </div>
+        <div class="pricing">
+            <div class="price-card">
+                <h3>Starter</h3>
+                <div class="price">$2,500 <span>/mo</span></div>
+                <ul>
+                    <li>Basic KOL Strategy</li>
+                    <li>Community Setup</li>
+                    <li>Social Media Management</li>
+                    <li>Weekly Performance Report</li>
+                </ul>
+                <a href="#contact" class="btn secondary">Get Started</a>
+            </div>
+            <div class="price-card featured">
+                <h3>Growth</h3>
+                <div class="price">$5,000 <span>/mo</span></div>
+                <ul>
+                    <li>Tier 1 & 2 Influencers</li>
+                    <li>24/7 Telegram & Discord Mod</li>
+                    <li>Press Release Distribution</li>
+                    <li>Viral Campaign Management</li>
+                </ul>
+                <a href="#contact" class="btn primary">Scale Now</a>
+            </div>
+            <div class="price-card">
+                <h3>Enterprise</h3>
+                <div class="price">Custom</div>
+                <ul>
+                    <li>Full Launch Strategy</li>
+                    <li>Dedicated Advisory</li>
+                    <li>Tier 1 Media Features</li>
+                    <li>Tokenomics Consultation</li>
+                </ul>
+                <a href="#contact" class="btn secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Ready to Launch?</h2>
+        <p>Let's build a dominating market presence for your Web3 brand.</p>
+        <a href="mailto:contact@blacknova.com" class="btn primary">Book a Call</a>
+        <div class="socials">
+            <a href="#" class="social">X (Twitter)</a>
+            <a href="#" class="social">Telegram</a>
+            <a href="#" class="social">Discord</a>
+            <a href="#" class="social">LinkedIn</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Black Nova Agency. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
