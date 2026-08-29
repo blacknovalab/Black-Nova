@@ -1,136 +1,297 @@
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Nova</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black Nova - Next-Gen Web3 Community</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        body {
-            background-color: #0b0c10;
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 20px;
-        }
+    body {
+      background-color: #0b0c10;
+      color: #ffffff;
+      line-height: 1.6;
+    }
 
-        .hero {
-            max-width: 800px;
-            margin-bottom: 50px;
-        }
+    /* 1. Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 8%;
+      background: rgba(11, 12, 16, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
-        .main-logo {
-            max-width: 280px;
-            width: 100%;
-            height: auto;
-            margin: 0 auto 20px auto;
-            display: block;
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.15));
-        }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-        .hero p {
-            color: #a0a5b5;
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 30px auto;
-            line-height: 1.6;
-        }
+    .logo-img {
+      height: 45px;
+      width: auto;
+      object-fit: contain;
+    }
 
-        .btn-container {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-        }
+    .logo-text {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #ffffff;
+      letter-spacing: 2px;
+    }
 
-        .btn {
-            background: transparent;
-            color: #ffffff;
-            border: 1px solid #333333;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-        }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
 
-        .btn:hover {
-            border-color: #ffffff;
-            background: rgba(255, 255, 255, 0.1);
-        }
+    .nav-links a {
+      color: #c5c6c7;
+      text-decoration: none;
+      transition: 0.3s;
+    }
 
-        .features-title {
-            font-size: 2rem;
-            margin-bottom: 40px;
-        }
+    .nav-links a:hover {
+      color: #66fcf1;
+    }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            width: 100%;
-            max-width: 900px;
-        }
+    .wallet-btn {
+      background: linear-gradient(45deg, #45a29e, #66fcf1);
+      color: #0b0c10;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-        .card {
-            background-color: #12141d;
-            border: 1px solid #1f2430;
-            padding: 30px 20px;
-            border-radius: 12px;
-        }
+    .wallet-btn:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
 
-        .card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-        }
+    /* 2. Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-        .card p {
-            color: #7a8294;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-    </style>
+    .hero-main-logo {
+      width: 140px;
+      height: auto;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 15px rgba(102, 252, 241, 0.3));
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    .hero p {
+      color: #c5c6c7;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      background: #1f2833;
+      color: #66fcf1;
+      border: 1px solid #66fcf1;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .hero-btn:hover {
+      background: #66fcf1;
+      color: #0b0c10;
+    }
+
+    /* Section Title */
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin: 60px 0 30px;
+      color: #66fcf1;
+    }
+
+    /* 3. Features & Stats Cards */
+    .grid-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 0 8%;
+    }
+
+    .card {
+      background: #1f2833;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 25px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .card h3 {
+      color: #66fcf1;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #c5c6c7;
+      font-size: 0.95rem;
+    }
+
+    /* 4. Roadmap Section */
+    .roadmap-card {
+      background: #1f2833;
+      border-left: 4px solid #66fcf1;
+      border-radius: 8px;
+      padding: 20px;
+      width: 280px;
+      text-align: left;
+    }
+
+    .roadmap-card h4 {
+      color: #66fcf1;
+      margin-bottom: 5px;
+    }
+
+    /* 5. Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 80px;
+      background: #000000;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #c5c6c7;
+    }
+
+    .social-links {
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      color: #66fcf1;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
 
-    <section class="hero">
-        <img src="logo.png" alt="Black Nova Logo" class="main-logo">
-        <p>Welcome to Black Nova — a next-generation crypto community built around innovation, opportunities and the future of Web3.</p>
-        <div class="btn-container">
-            <a href="#" class="btn">Join Telegram</a>
-            <a href="#" class="btn">Follow on X</a>
-        </div>
-    </section>
+  <!-- 1. Navigation Bar with Logo -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="logo.png" alt="Black Nova Logo" class="logo-img">
+      <span class="logo-text">BLACK NOVA</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+    </ul>
+    <button class="wallet-btn">Connect Wallet</button>
+  </nav>
 
-    <h2 class="features-title">Why Black Nova?</h2>
+  <!-- 2. Hero Section -->
+  <section class="hero" id="about">
+    <img src="logo.png" alt="Black Nova Big Logo" class="hero-main-logo">
+    <h1>Welcome to Black Nova</h1>
+    <p>A next-generation crypto community built around innovation, opportunities, and the future of Web3.</p>
+    <div>
+      <a href="https://t.me" target="_blank" class="hero-btn">Join Telegram</a>
+      <a href="https://x.com" target="_blank" class="hero-btn">Follow on X</a>
+    </div>
+  </section>
 
-    <section class="features-grid">
-        <div class="card">
-            <h3>Web3</h3>
-            <p>Experience the next generation of decentralized finance and blockchain technology.</p>
-        </div>
-        <div class="card">
-            <h3>Community</h3>
-            <p>Connect with people who are passionate about crypto and Web3 space.</p>
-        </div>
-        <div class="card">
-            <h3>Opportunities</h3>
-            <p>Discover early-stage projects and actively participate in the crypto ecosystem.</p>
-        </div>
-    </section>
+  <!-- 3. Stats Section -->
+  <div class="grid-container">
+    <div class="card">
+      <h3>10K+</h3>
+      <p>Community Members</p>
+    </div>
+    <div class="card">
+      <h3>50+</h3>
+      <p>Web3 Projects</p>
+    </div>
+    <div class="card">
+      <h3>100%</h3>
+      <p>Decentralized</p>
+    </div>
+  </div>
+
+  <!-- 4. Why Black Nova (Features) -->
+  <h2 class="section-title" id="features">Why Black Nova?</h2>
+  <div class="grid-container">
+    <div class="card">
+      <h3>Web3</h3>
+      <p>Experience the next generation of decentralized finance and blockchain technology.</p>
+    </div>
+    <div class="card">
+      <h3>Community</h3>
+      <p>Connect with people who are passionate about crypto and Web3 space.</p>
+    </div>
+    <div class="card">
+      <h3>Opportunities</h3>
+      <p>Discover early-stage projects and actively participate in the crypto ecosystem.</p>
+    </div>
+  </div>
+
+  <!-- 5. Roadmap Section -->
+  <h2 class="section-title" id="roadmap">Roadmap</h2>
+  <div class="grid-container">
+    <div class="roadmap-card">
+      <h4>Phase 1</h4>
+      <h3>Foundation</h3>
+      <p>Community Launch, Socials Setup, and Initial Outreach.</p>
+    </div>
+    <div class="roadmap-card">
+      <h4>Phase 2</h4>
+      <h3>Expansion</h3>
+      <p>Strategic Partnerships and Web3 Platform Utility Launch.</p>
+    </div>
+    <div class="roadmap-card">
+      <h4>Phase 3</h4>
+      <h3>Ecosystem</h3>
+      <p>DAO Governance integration and Community Rewards program.</p>
+    </div>
+  </div>
+
+  <!-- 6. Footer -->
+  <footer>
+    <p>© 2026 Black Nova. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">Telegram</a> | 
+      <a href="#">X (Twitter)</a> | 
+      <a href="#">Discord</a>
+    </div>
+  </footer>
 
 </body>
 </html>
+
+
+
