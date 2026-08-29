@@ -7,59 +7,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Nova</title>
     <style>
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
+            box-sizing: border-box;
         }
 
-        .container {
+        body {
+            background-color: #0b0c10;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
             padding: 20px;
         }
 
-        
-        .logo-img {
-            max-width: 320px;
+        .hero {
+            max-width: 800px;
+            margin-bottom: 60px;
+        }
+
+        .main-logo {
+            max-width: 280px;
             width: 100%;
             height: auto;
             margin-bottom: 20px;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
         }
 
-        h1 {
-            font-size: 2.5rem;
-            letter-spacing: 2px;
-            margin-top: 10px;
-        }
-
-        p {
-            color: #888888;
+        .hero p {
+            color: #a0a5b5;
             font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            line-height: 1.6;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn {
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid #333333;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            border-color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .features-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .card {
+            background-color: #12141d;
+            border: 1px solid #1f2430;
+            padding: 30px 20px;
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #7a8294;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <img src="logo.png" alt="Black Nova Logo" class="logo-img">
-        
-        
-        <h1>BLACK NOVA</h1>
-        <p>Welcome to Black Nova Official Website</p>
-    </div>
+    <section class="hero">
+        <img src="logo.png" alt="Black Nova Logo" class="main-logo">
+        <p>Welcome to Black Nova — a next-generation crypto community built around innovation, opportunities and the future of Web3.</p>
+        <div class="btn-container">
+            <a href="#" class="btn">Join Telegram</a>
+            <a href="#" class="btn">Follow on X</a>
+        </div>
+    </section>
+
+    <h2 class="features-title">Why Black Nova?</h2>
+
+    <section class="features-grid">
+        <div class="card">
+            <h3>Web3</h3>
+            <p>Experience the next generation of decentralized finance and blockchain technology.</p>
+        </div>
+        <div class="card">
+            <h3>Community</h3>
+            <p>Connect with people who are passionate about crypto and Web3 space.</p>
+        </div>
+        <div class="card">
+            <h3>Opportunities</h3>
+            <p>Discover early-stage projects and actively participate in the crypto ecosystem.</p>
+        </div>
+    </section>
 
 </body>
 </html>
 
-
-
-
-
+  
